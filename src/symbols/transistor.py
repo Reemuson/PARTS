@@ -1,6 +1,7 @@
 # file: src/symbols/transistor.py
 
 from typing import Dict, Callable
+from math import sqrt
 
 from reportlab.lib.colors import black
 from reportlab.pdfgen.canvas import Canvas
@@ -359,59 +360,204 @@ def draw_igbt_p(canvas: Canvas, rect: simple_rect) -> None:
 
 
 # ----------------------------------------------------------------------
-# SCR / TRIAC (simplified IEC-style, inside circle)
+# SCR / TRIAC (IEC-style, inside circle)
 # ----------------------------------------------------------------------
 
 
+def _draw_vertical_diode(
+    canvas: Canvas,
+    *,
+    cx: float,
+    cy: float,
+    s: float,
+    pointing_down: bool,
+    bar_extend: float = 0.0,
+) -> None:
+    """
+    @brief			        Draw a simple vertical diode (filled triangle + bar).
+
+    @param	canvas		    ReportLab canvas.
+    @param	cx		        Centre x.
+    @param	cy		        Centre y.
+    @param	s		        Scale factor.
+    @param	pointing_down	True for triangle pointing down to the bar.
+    @param	bar_extend	    Extra bar half-length (each side), in points.
+    @return	None
+    """
+    canvas.setStrokeColor(black)
+    canvas.setFillColor(black)
+    canvas.setLineCap(0)
+    canvas.setLineJoin(0)
+
+    tri_h = s
+    tri_w = s
+    bar_w = s
+    bar_gap = 0.08 * s
+
+    total_h = tri_h + bar_gap
+    y_top = cy + 0.5 * total_h
+    y_bot = cy - 0.5 * total_h
+
+    if pointing_down:
+        y_bar = y_bot
+        y_tip = y_bar + bar_gap
+        y_base = y_tip + tri_h
+    else:
+        y_bar = y_top
+        y_tip = y_bar - bar_gap
+        y_base = y_tip - tri_h
+
+    p = canvas.beginPath()
+    p.moveTo(cx, y_tip)
+    p.lineTo(cx - 0.5 * tri_w, y_base)
+    p.lineTo(cx + 0.5 * tri_w, y_base)
+    p.close()
+    canvas.drawPath(p, stroke=0, fill=1)
+
+    canvas.setLineWidth(1.6)
+
+    if pointing_down:
+        x1 = cx - 0.5 * bar_w - bar_extend
+        x2 = cx + 0.5 * bar_w
+    else:
+        x1 = cx - 0.5 * bar_w
+        x2 = cx + 0.5 * bar_w + bar_extend
+
+    canvas.line(x1, y_bar, x2, y_bar)
+
+
 def draw_scr(canvas: Canvas, rect: simple_rect) -> None:
+    """
+    @brief	        Draw an SCR (thyristor) IEC symbol inside a circle.
+
+    @param	canvas	ReportLab canvas.
+    @param	rect	Bounding rectangle.
+    @return	None
+    """
     cx, cy, r = _circle_frame(rect)
 
+    canvas.setStrokeColor(black)
+    canvas.setFillColor(black)
     canvas.setLineWidth(1.2)
     canvas.circle(cx, cy, r, stroke=1, fill=0)
 
-    lead_ext = r * 0.60
+    s = r * 0.65
+    lead_out = r * 0.55
 
-    # Main A-K path (vertical)
-    ax = cx
-    ay_top = cy + r * 0.70
-    ay_bot = cy - r * 0.70
-    canvas.line(ax, ay_top, ax, ay_bot)
+    _draw_vertical_diode(canvas, cx=cx, cy=cy, s=s, pointing_down=True)
 
-    # External anode / cathode
-    canvas.line(ax, ay_top, ax, cy + r + lead_ext * 0.3)
-    canvas.line(ax, ay_bot, ax, cy - r - lead_ext * 0.3)
+    y_anode = cy + 0.35 * r
+    y_cathode = cy - 0.35 * r
+    canvas.setLineWidth(1.4)
+    canvas.line(cx, y_anode, cx, cy + r + lead_out * 0.25)
+    canvas.line(cx, y_cathode, cx, cy - r - lead_out * 0.25)
 
-    # Gate from left into lower half
-    gx0 = cx - r - lead_ext * 0.2
-    gy = cy - r * 0.25
-    canvas.line(gx0, gy, ax - r * 0.15, gy)
+    bar_gap = 0.08 * s
+    y_tip = cy - 0.5 * s
+    y_bar = y_tip - bar_gap
+
+    # Gate origin at centre of cathode bar
+    gx0 = cx
+    gy0 = y_bar
+
+    # 45-degree diagonal segment
+    diag_len = 0.35 * r
+    gx1 = gx0 - diag_len
+    gy1 = gy0 - diag_len
+
+    # Horizontal run to circle boundary
+    dy = gy1 - cy
+    inside = (r * r) - (dy * dy)
+    if inside < 0.0:
+        inside = 0.0
+
+    gx2 = cx - sqrt(inside) - lead_out * 0.5
+    gy2 = gy1
+
+    canvas.setLineWidth(1.4)
+
+    p = canvas.beginPath()
+    p.moveTo(gx0, gy0)
+    p.lineTo(gx1, gy1)
+    p.lineTo(gx2, gy2)
+    canvas.drawPath(p)
 
 
 def draw_triac(canvas: Canvas, rect: simple_rect) -> None:
+    """
+    @brief		    Draw a TRIAC IEC symbol inside a circle.
+
+    @param	canvas	ReportLab canvas.
+    @param	rect	Bounding rectangle.
+    @return	None
+    """
     cx, cy, r = _circle_frame(rect)
 
+    canvas.setStrokeColor(black)
+    canvas.setFillColor(black)
     canvas.setLineWidth(1.2)
     canvas.circle(cx, cy, r, stroke=1, fill=0)
 
-    lead_ext = r * 0.60
+    s = r * 0.58
+    lead_out = r * 0.55
 
-    # Two opposing vertical paths for MT1 / MT2
-    x1 = cx - r * 0.20
-    x2 = cx + r * 0.20
-    y_top = cy + r * 0.70
-    y_bot = cy - r * 0.70
+    x_sep = s * 0.75
+    cx_left = cx - 0.5 * x_sep
+    cx_right = cx + 0.5 * x_sep
 
-    canvas.line(x1, y_top, x1, y_bot)
-    canvas.line(x2, y_top, x2, y_bot)
+    bar_extend = x_sep
 
-    # External MT2 (top), MT1 (bottom)
-    canvas.line(x2, y_top, x2, cy + r + lead_ext * 0.3)
-    canvas.line(x1, y_bot, x1, cy - r - lead_ext * 0.3)
+    _draw_vertical_diode(
+        canvas,
+        cx=cx_left,
+        cy=cy,
+        s=s,
+        pointing_down=False,
+        bar_extend=bar_extend,
+    )
 
-    # Gate from left into middle
-    gx0 = cx - r - lead_ext * 0.2
-    gy = cy
-    canvas.line(gx0, gy, x1, gy)
+    _draw_vertical_diode(
+        canvas,
+        cx=cx_right,
+        cy=cy,
+        s=s,
+        pointing_down=True,
+        bar_extend=bar_extend,
+    )
+
+    y_top = cy + 0.35 * r
+    y_bot = cy - 0.35 * r
+    canvas.setLineWidth(1.4)
+    canvas.line(cx, y_top, cx, cy + r + lead_out * 0.25)
+    canvas.line(cx, y_bot, cx, cy - r - lead_out * 0.25)
+
+    tri_h = s
+    bar_gap = 0.08 * s
+    total_h = tri_h + bar_gap
+    y_bot_diode = cy - 0.5 * total_h
+
+    # Gate origin at centre of left anode
+    gate_origin_x = cx_left
+    gate_origin_y = y_bot_diode
+
+    # 45-degree diagonal segment
+    diag_len = 0.25 * r
+    gate_kink_x = gate_origin_x - diag_len
+    gate_kink_y = gate_origin_y - diag_len
+
+    # Horizontal run to circle boundary
+    dy = gate_kink_y - cy
+    inside = (r * r) - (dy * dy)
+    if inside < 0.0:
+        inside = 0.0
+
+    gate_circle_x = cx - sqrt(inside) - lead_out * 0.5
+
+    p = canvas.beginPath()
+    p.moveTo(gate_origin_x, gate_origin_y)
+    p.lineTo(gate_kink_x, gate_kink_y)
+    p.lineTo(gate_circle_x, gate_kink_y)
+    canvas.drawPath(p)
 
 
 # ----------------------------------------------------------------------
