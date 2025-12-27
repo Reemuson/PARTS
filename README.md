@@ -57,6 +57,7 @@ PARTS is for you.
   <img src="docs/images/transistor_labels.jpg" width="30%">
   <img src="docs/images/example_output.jpg" width="30%">
 </p>
+
 ---
 
 ## Example Configuration
