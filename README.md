@@ -52,7 +52,7 @@ PARTS is for you.
 
 ## Documentation
 
-Full documentation is available in the **[GitHub Wiki](https://github.com/Reemson/PARTS/wiki)**:
+Full documentation is available in the **[GitHub Wiki](https://github.com/Reemuson/PARTS/wiki)**:
 
 - Getting Started
 - Installation
@@ -94,7 +94,7 @@ A minimal example:
 PARTS supports a wide range of discrete components including resistors,
 diodes, transistors and power devices.
 
-See the **[wiki](https://github.com/Reemson/PARTS/wiki/Supported-Components)** for the authoritative list of supported components, subtypes and JSON schema.
+See the **[wiki](https://github.com/Reemuson/PARTS/wiki/Supported-Components)** for the authoritative list of supported components, subtypes and JSON schema.
 
 ---
 
@@ -103,7 +103,7 @@ See the **[wiki](https://github.com/Reemson/PARTS/wiki/Supported-Components)** f
 PARTS is designed to be modular and contributor-friendly.
 
 Guidelines for adding new components, symbols and packages are documented
-in the **[wiki](https://github.com/Reemson/PARTS/wiki/Contributing)**.
+in the **[wiki](https://github.com/Reemuson/PARTS/wiki/Contributing)**.
 
 ---
 
