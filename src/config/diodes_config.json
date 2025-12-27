@@ -2,8 +2,6 @@
 	"title": "Diode Component Labels",
 	"layout": "AVERY_L7144",
 	"options": {
-		"draw_both_sides": false,
-		"draw_center_line": false,
 		"draw_outlines": true
 	},
 	"labels": [

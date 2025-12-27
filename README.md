@@ -50,12 +50,24 @@ PARTS is for you.
 
 ---
 
+## Example Output
+
+<p align="center">
+  <img src="docs/images/led_labels.jpg" width="30%">
+  <img src="docs/images/transistor_labels.jpg" width="30%">
+  <img src="docs/images/example_output.jpg" width="30%">
+</p>
+---
+
 ## Example Configuration
 
 ```json
 {
   "title": "My Components",
   "layout": "AVERY_5260",
+  "options": {
+		"draw_outlines": true
+	},
   "labels": [
     { "kind": "resistor", "value_ohms": 4700 },
     {
@@ -112,6 +124,17 @@ Change label layout in your configuration:
   "layout": "AVERY_L7157"
 }
 ```
+
+You can draw outlines around the labels for test printing:
+
+```json
+{
+  "options": {
+    "draw_outlines": true
+  }
+}
+```
+
 
 ---
 
