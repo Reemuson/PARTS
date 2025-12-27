@@ -1,52 +1,42 @@
 # file: src/render_engine.py
 
-from typing import Optional, List
+"""
+@brief	Label rendering orchestration and page control.
+"""
 
-from reportlab.pdfgen.canvas import Canvas
+from dataclasses import dataclass
+from typing import List, Optional
+
 from reportlab.lib.colors import black
+from reportlab.pdfgen.canvas import Canvas
 
-from src.layout.paper_layouts import paper_config_t
+from src.components.active_renderer import draw_active_label
+from src.components.capacitor_renderer import draw_capacitor_label
+from src.components.diode_renderer import draw_diode_label
+from src.components.resistor_renderer import draw_resistor_label
+from src.components.transistor_renderer import draw_transistor_label
+from src.config.config_loader import render_options_t
+from src.core.errors import render_error_t
 from src.drawing.sticker_rect import sticker_rect_t
-
+from src.layout.paper_layouts import paper_config_t
 from src.model.devices import (
+    active_label_t,
+    capacitor_label_t,
+    diode_label_t,
     label_t,
     resistor_label_t,
-    diode_label_t,
-    capacitor_label_t,
-    active_label_t,
     transistor_label_t,
 )
 
-from src.components.resistor_renderer import draw_resistor_label
-from src.components.diode_renderer import draw_diode_label
-from src.components.capacitor_renderer import draw_capacitor_label
-from src.components.active_renderer import draw_active_label
-from src.components.transistor_renderer import draw_transistor_label
 
-from src.config.config_loader import render_options_t
+@dataclass(frozen=True)
+class render_counts_t:
+    """
+    @brief	Internal counters for render progress.
+    """
 
-
-# ======================================================================
-# PAGE CONTROL
-# ======================================================================
-
-
-def begin_page(
-    canvas: Canvas,
-    layout: paper_config_t,
-    draw_outlines: bool,
-) -> None:
-    if draw_outlines:
-        _draw_outlines(canvas, layout)
-
-
-def end_page(canvas: Canvas) -> None:
-    canvas.showPage()
-
-
-# ======================================================================
-# MAIN ENTRY
-# ======================================================================
+    labels_rendered: int
+    pages_rendered: int
 
 
 def render_labels(
@@ -55,23 +45,33 @@ def render_labels(
     labels: List[Optional[label_t]],
     options: render_options_t,
     font_family: str,
-) -> None:
+) -> render_counts_t:
+    """
+    @brief		Render labels onto a PDF canvas.
+    @param canvas	ReportLab canvas to draw into.
+    @param layout	Label sheet layout definition.
+    @param labels	Label list, with None entries for blanks.
+    @param options	Render options.
+    @param font_family	Resolved font family identifier.
+    @return		Render count summary.
+    """
+    cols = int(layout.num_stickers_horizontal)
+    rows = int(layout.num_stickers_vertical)
 
-    cols = layout.num_stickers_horizontal
-    rows = layout.num_stickers_vertical
-    per_page = cols * rows
+    labels_rendered = 0
+    pages_rendered = 1
 
     canvas.setTitle(f"Component Labels - {layout.paper_name}")
-    begin_page(canvas, layout, options.draw_outlines)
+    _begin_page(canvas, layout, bool(options.draw_outlines))
 
     for position, label in enumerate(labels):
-
         row = (position // cols) % rows
         col = position % cols
 
         if position > 0 and row == 0 and col == 0:
-            end_page(canvas)
-            begin_page(canvas, layout, options.draw_outlines)
+            _end_page(canvas)
+            pages_rendered += 1
+            _begin_page(canvas, layout, bool(options.draw_outlines))
 
         if label is None:
             continue
@@ -79,19 +79,20 @@ def render_labels(
         _draw_single_label(
             canvas,
             layout,
-            row,
-            col,
+            int(row),
+            int(col),
             label,
             options,
             font_family,
         )
+        labels_rendered += 1
 
-    end_page(canvas)
+    _end_page(canvas)
 
-
-# ======================================================================
-# LABEL DISPATCH
-# ======================================================================
+    return render_counts_t(
+        labels_rendered=int(labels_rendered),
+        pages_rendered=int(pages_rendered),
+    )
 
 
 def _draw_single_label(
@@ -103,8 +104,20 @@ def _draw_single_label(
     options: render_options_t,
     font_family: str,
 ) -> None:
+    """
+    @brief		Draw a single label at the given grid position.
+    @param canvas	Target canvas.
+    @param layout	Paper layout definition.
+    @param row		Row index.
+    @param column	Column index.
+    @param label	Label model.
+    @param options	Render options.
+    @param font_family	Resolved font family identifier.
+    @return		None.
+    @warning		Raises render_error_t on unknown label types.
+    """
+    draw_center_line = bool(options.draw_center_line)
 
-    # -------- RESISTOR --------
     if isinstance(label, resistor_label_t):
         draw_resistor_label(
             canvas,
@@ -113,11 +126,10 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            options.draw_center_line,
+            draw_center_line,
         )
         return
 
-    # -------- DIODE --------
     if isinstance(label, diode_label_t):
         draw_diode_label(
             canvas,
@@ -126,11 +138,10 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            options.draw_center_line,
+            draw_center_line,
         )
         return
 
-    # -------- CAPACITOR --------
     if isinstance(label, capacitor_label_t):
         draw_capacitor_label(
             canvas,
@@ -139,11 +150,10 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            options.draw_center_line,
+            draw_center_line,
         )
         return
 
-    # -------- TRANSISTOR --------
     if isinstance(label, transistor_label_t):
         draw_transistor_label(
             canvas,
@@ -152,11 +162,10 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            options.draw_center_line,
+            draw_center_line,
         )
         return
 
-    # -------- ACTIVE --------
     if isinstance(label, active_label_t):
         draw_active_label(
             canvas,
@@ -165,20 +174,51 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            options.draw_center_line,
+            draw_center_line,
         )
         return
 
+    raise render_error_t(
+        "Unknown label type",
+        detail=str(type(label)),
+    )
 
-# ======================================================================
-# OPTIONAL OUTLINES
-# ======================================================================
+
+def _begin_page(
+    canvas: Canvas,
+    layout: paper_config_t,
+    draw_outlines: bool,
+) -> None:
+    """
+    @brief			Begin a page and draw any page-level adornments.
+    @param canvas		Target canvas.
+    @param layout		Paper layout definition.
+    @param draw_outlines	Whether outlines should be drawn.
+    @return			None.
+    """
+    if draw_outlines:
+        _draw_outlines(canvas, layout)
+
+
+def _end_page(canvas: Canvas) -> None:
+    """
+    @brief		End the current page and advance the canvas.
+    @param canvas	Target canvas.
+    @return		None.
+    """
+    canvas.showPage()
 
 
 def _draw_outlines(canvas: Canvas, layout: paper_config_t) -> None:
-    for row in range(layout.num_stickers_vertical):
-        for col in range(layout.num_stickers_horizontal):
-            with sticker_rect_t(canvas, layout, row, col) as rect:
+    """
+    @brief		Draw per-sticker outlines for debugging and alignment.
+    @param canvas	Target canvas.
+    @param layout	Paper layout definition.
+    @return		None.
+    """
+    for row in range(int(layout.num_stickers_vertical)):
+        for col in range(int(layout.num_stickers_horizontal)):
+            with sticker_rect_t(canvas, layout, int(row), int(col)) as rect:
                 canvas.setStrokeColor(black, 0.5)
                 canvas.setLineWidth(0.1)
                 canvas.roundRect(
