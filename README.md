@@ -50,6 +50,20 @@ PARTS is for you.
 
 ---
 
+## Documentation
+
+Full documentation is available in the **[GitHub Wiki](https://github.com/Reemson/PARTS/wiki)**:
+
+- Getting Started
+- Installation
+- Command-Line Interface
+- Configuration Reference
+- Supported Components
+- Supported Packages
+- Roadmap
+
+---
+
 ## Example Output
 
 <p align="center">
@@ -62,134 +76,34 @@ PARTS is for you.
 
 ## Example Configuration
 
+A minimal example:
+
 ```json
 {
-  "title": "My Components",
   "layout": "AVERY_5260",
-  "options": {
-		"draw_outlines": true
-	},
   "labels": [
-    { "kind": "resistor", "value_ohms": 4700 },
-    {
-      "kind": "diode",
-      "part_number": "1N4148",
-      "subtype": "signal",
-      "package": "DO-35@glass",
-      "spec": {
-        "vr": "100V",
-        "if": "150mA",
-        "trr": "4ns"
-      }
-    }
+    { "kind": "resistor", "value_ohms": 4700 }
   ]
 }
 ```
 
 ---
 
-## Installation
-
-### Requirements
-
-- Python 3.10 or newer
-- reportlab
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Clone Repository
-
-```bash
-git clone https://github.com/Reemson/PARTS
-cd PARTS
-```
-
----
-
-## Usage
-
-Generate a label sheet from a configuration file:
-
-```bash
-python main.py ./src/config/example_config.json
-```
-
-Change label layout in your configuration:
-
-```json
-{
-  "layout": "AVERY_L7157"
-}
-```
-
-You can draw outlines around the labels for test printing:
-
-```json
-{
-  "options": {
-    "draw_outlines": true
-  }
-}
-```
-
-
----
-
 ## Supported Components
 
-- Resistors
-- Diodes:
-  - Rectifier
-  - Fast recovery
-  - Schottky
-  - Zener
-  - TVS (uni and bi-directional)
-  - Photodiodes
-  - Varicaps
-  - LEDs
-- Transistors:
-  - BJT (NPN, PNP, Darlington)
-  - MOSFET (N and P channel)
-  - JFET
-  - IGBT
-  - TRIAC
-  - SCR
+PARTS supports a wide range of discrete components including resistors,
+diodes, transistors and power devices.
 
-See `Supported-Packages.md` for full package coverage.
+See the **[wiki](https://github.com/Reemson/PARTS/wiki/Supported-Components)** for the authoritative list of supported components, subtypes and JSON schema.
 
 ---
 
-## Project Structure
+## Contributing and Extending
 
-```
-src/
-├─ components/     # High-level device renderers
-├─ symbols/        # Electrical symbols
-├─ packages/       # Physical package drawings
-├─ layouts/        # Label sheet templates
-├─ model/          # Typed device and spec models
-└─ render_engine.py
-```
+PARTS is designed to be modular and contributor-friendly.
 
----
-
-## Extending PARTS
-
-To add a new component type:
-
-1. Add a spec dataclass in `src/model/`
-2. Implement a renderer in `src/components/`
-3. Add symbol drawing (optional)
-4. Add package drawing (optional)
-5. Register the renderer
-
-PARTS is intentionally modular and contributor-friendly.
-
-See `ROADMAP.md` for planned features and direction.
+Guidelines for adding new components, symbols and packages are documented
+in the **[wiki](https://github.com/Reemson/PARTS/wiki/Contributing)**.
 
 ---
 
