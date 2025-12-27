@@ -1,0 +1,687 @@
+{
+	"title": "Transistor Component Labels",
+	"layout": "AVERY_L7144",
+	"options": {
+		"draw_both_sides": false,
+		"draw_center_line": false,
+		"draw_outlines": true
+	},
+	"labels": [
+		{
+			"kind": "transistor",
+			"part_number": "BC327",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-45V",
+				"i_c_cont": "-800mA",
+				"p_d": "625mW",
+				"h_fe": "100–630",
+				"f_t": "260MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC328",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-25V",
+				"i_c_cont": "-800mA",
+				"p_d": "625mW",
+				"h_fe": "100–630",
+				"f_t": "260MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC337",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "45V",
+				"i_c_cont": "800mA",
+				"p_d": "625mW",
+				"h_fe": "100–630",
+				"f_t": "210MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC338",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-25V",
+				"i_c_cont": "800mA",
+				"p_d": "625mW",
+				"h_fe": "100–630",
+				"f_t": "210MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC639",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "80V",
+				"i_c_max": "1A",
+				"p_d": "830mW",
+				"h_fe": "63–250",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC546",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "65V",
+				"i_c_max": "100mA",
+				"p_d": "500mW",
+				"h_fe": "110–220",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC547",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "45V",
+				"i_c_max": "100mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC550",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "45V",
+				"i_c_max": "100mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC548",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "30V",
+				"i_c_max": "100mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC549",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "30V",
+				"i_c_max": "100mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC556",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-65V",
+				"i_c_cont": "-100mA",
+				"i_c_max": "-200mA",
+				"p_d": "500mW",
+				"h_fe": "125–475",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC557",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-45V",
+				"i_c_cont": "-100mA",
+				"i_c_max": "-200mA",
+				"p_d": "500mW",
+				"h_fe": "125–800",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC558",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-30V",
+				"i_c_cont": "-100mA",
+				"i_c_max": "-200mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC559",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-30V",
+				"i_c_cont": "-100mA",
+				"i_c_max": "-200mA",
+				"p_d": "500mW",
+				"h_fe": "110–800",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BC640",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-80V",
+				"i_c_cont": "-500mA",
+				"p_d": "625mW",
+				"h_fe": "63–250",
+				"f_t": "150MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD135",
+			"subtype": "npn",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "45V",
+				"i_c_max": "1.5A",
+				"p_d": "10W",
+				"h_fe": "63–250"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD136",
+			"subtype": "pnp",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-45V",
+				"i_c_max": "1.5A",
+				"p_d": "10W",
+				"h_fe": "63–250"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD139",
+			"subtype": "npn",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "80V",
+				"i_c_max": "1.5A",
+				"p_d": "10W",
+				"h_fe": "63–250"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD140",
+			"subtype": "pnp",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-80V",
+				"i_c_max": "1.5A",
+				"p_d": "10W",
+				"h_fe": "63–250"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD649",
+			"subtype": "darlington_npn",
+			"package": "to220",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "8A",
+				"i_c_max": "12A",
+				"p_d": "62.5W",
+				"h_fe": "750"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD681",
+			"subtype": "darlington_npn",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "100V",
+				"i_c_cont": "4A",
+				"i_c_max": "5A",
+				"p_d": "40W",
+				"h_fe": "750"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BD682",
+			"subtype": "darlington_pnp",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-100V",
+				"i_c_cont": "-4A",
+				"i_c_max": "-5A",
+				"p_d": "40W",
+				"h_fe": "750"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BF469",
+			"subtype": "npn",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "250V",
+				"i_c_max": "100mA",
+				"p_d": "1.8W",
+				"h_fe": "50",
+				"f_t": "60MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "BF470",
+			"subtype": "pnp",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-250V",
+				"i_c_max": "-100mA",
+				"p_d": "1.8W",
+				"h_fe": "50",
+				"f_t": "60MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJ10012",
+			"subtype": "darlington_npn",
+			"package": "to-204-aa",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "400V",
+				"i_c_cont": "10A",
+				"i_c_max": "15A",
+				"p_d": "175W",
+				"h_fe": "350"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJL21194",
+			"subtype": "npn",
+			"package": "to-264",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "250V",
+				"i_c_cont": "16A",
+				"i_c_max": "30A",
+				"p_d": "200W",
+				"h_fe": "25–75",
+				"f_t": "4MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJ15003",
+			"subtype": "npn",
+			"package": "to3",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "140V",
+				"i_c_cont": "20A",
+				"p_d": "250W",
+				"h_fe": "25–150",
+				"f_t": "2MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJ2955",
+			"subtype": "pnp",
+			"package": "to3",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-60V",
+				"i_c_cont": "-15A",
+				"p_d": "115W",
+				"h_fe": "20–70",
+				"f_t": "2.5MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJE350",
+			"subtype": "pnp",
+			"package": "to126",
+			"spec": {
+				"pin_config": "e c b",
+				"v_ceo": "-300V",
+				"i_c_max": "-500mA",
+				"p_d": "20.8W",
+				"h_fe": "30–240"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJE2955T",
+			"subtype": "pnp",
+			"package": "to-220-ab",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "-60V",
+				"i_c_max": "-10A",
+				"p_d": "75W",
+				"h_fe": "20–100",
+				"f_t": "2MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MJE3055T",
+			"subtype": "npn",
+			"package": "to-220-ab",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "60V",
+				"i_c_max": "10A",
+				"p_d": "75W",
+				"h_fe": "20–100",
+				"f_t": "2MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "MPSA13",
+			"subtype": "darlington_npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e b c",
+				"v_ceo": "30V",
+				"i_c_cont": "500mA",
+				"p_d": "625mW",
+				"h_fe": "5000",
+				"f_t": "125MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP2955",
+			"subtype": "pnp",
+			"package": "to-247",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "-60V",
+				"i_c_max": "-15A",
+				"p_d": "90W",
+				"h_fe": "20–70"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP3055",
+			"subtype": "npn",
+			"package": "to-247",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "60V",
+				"i_c_max": "15A",
+				"p_d": "90W",
+				"h_fe": "20–70"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP31C",
+			"subtype": "npn",
+			"package": "to-220-ab",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "3A",
+				"i_c_max": "5A",
+				"p_d": "40W",
+				"h_fe": "25–50",
+				"f_t": "3MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP32C",
+			"subtype": "pnp",
+			"package": "to-220-ab",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "3A",
+				"i_c_max": "5A",
+				"p_d": "40W",
+				"h_fe": "25–50",
+				"f_t": "3MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP35C",
+			"subtype": "npn",
+			"package": "to-218",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "25A",
+				"i_c_max": "40A",
+				"p_d": "125W",
+				"h_fe": "15–75",
+				"f_t": "3MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP41C",
+			"subtype": "npn",
+			"package": "to220",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "6A",
+				"i_c_max": "10A",
+				"p_d": "65W",
+				"h_fe": "15–75",
+				"f_t": "3MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP42C",
+			"subtype": "pnp",
+			"package": "to220",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "-100V",
+				"i_c_cont": "-6A",
+				"i_c_max": "-10A",
+				"p_d": "65W",
+				"h_fe": "15–75",
+				"f_t": "3MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "TIP122",
+			"subtype": "darlington_npn",
+			"package": "to220",
+			"spec": {
+				"pin_config": "b c e",
+				"v_ceo": "100V",
+				"i_c_cont": "5A",
+				"i_c_max": "8A",
+				"p_d": "65W",
+				"h_fe": "1000"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "P2N2222A",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "40V",
+				"i_c_cont": "600mA",
+				"p_d": "625mW",
+				"h_fe": "100–300",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "P2N2907A",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "-60V",
+				"i_c_cont": "-600mA",
+				"p_d": "625mW",
+				"h_fe": "100–300",
+				"f_t": "200MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3053",
+			"subtype": "npn",
+			"package": "to39",
+			"spec": {
+				"pin_config": "e b c",
+				"v_ceo": "40V",
+				"i_c_cont": "700mA",
+				"p_d": "5W",
+				"h_fe": "50–250",
+				"f_t": "100MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3055A",
+			"subtype": "npn",
+			"package": "to3",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "60V",
+				"i_c_cont": "15A",
+				"p_d": "115W",
+				"h_fe": "20–70",
+				"f_t": "0.8MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3638A",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e b c",
+				"v_ceo": "-25V",
+				"i_c_cont": "-800mA",
+				"p_d": "625mW",
+				"h_fe": "20–100"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3773",
+			"subtype": "npn",
+			"package": "to3",
+			"spec": {
+				"pin_config": "c b e",
+				"v_ceo": "140V",
+				"i_c_cont": "16A",
+				"i_c_max": "30A",
+				"p_d": "150W",
+				"h_fe": "15–60"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3904",
+			"subtype": "npn",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e b c",
+				"v_ceo": "40V",
+				"i_c_cont": "200mA",
+				"i_c_max": "300mA",
+				"p_d": "500mW",
+				"h_fe": "30–300",
+				"f_t": "300MHz"
+			}
+		},
+		{
+			"kind": "transistor",
+			"part_number": "2N3906",
+			"subtype": "pnp",
+			"package": "to92",
+			"spec": {
+				"pin_config": "e b c",
+				"v_ceo": "-40V",
+				"i_c_cont": "-200mA",
+				"i_c_max": "-300mA",
+				"p_d": "500mW",
+				"h_fe": "30–300",
+				"f_t": "250MHz"
+			}
+		}
+	]
+}

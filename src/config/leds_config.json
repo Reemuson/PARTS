@@ -1,0 +1,389 @@
+{
+	"title": "LED Component Labels",
+	"layout": "AVERY_L7144",
+	"options": {
+		"draw_both_sides": false,
+		"draw_center_line": false,
+		"draw_outlines": true
+	},
+	"labels": [
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0150",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "700nm",
+				"if": "20mA",
+				"vf": "2.3V",
+				"iv": "12mcd",
+				"viewing_angle": "50°",
+				"lens": "diffused"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0152",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "660nm",
+				"if": "20mA",
+				"vf": "1.7V",
+				"iv": "1200mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0154",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "625nm",
+				"if": "20mA",
+				"vf": "2.0V",
+				"iv": "3800mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0156",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "625nm",
+				"if": "20mA",
+				"vf": "2.1V",
+				"iv": "9600mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0178",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "616nm",
+				"if": "50mA",
+				"vf": "2.1V",
+				"iv": "20000mcd",
+				"viewing_angle": "8°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0194",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "624nm",
+				"if": "30mA",
+				"vf": "2.1V",
+				"iv": "23500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0169",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "635nm",
+				"if": "20mA",
+				"vf": "2.0V",
+				"iv": "80mcd",
+				"viewing_angle": "40°",
+				"lens": "diffused"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0172",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "585nm",
+				"if": "20mA",
+				"vf": "2.1V",
+				"iv": "70mcd",
+				"viewing_angle": "50°",
+				"lens": "diffused"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0160",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "590nm",
+				"if": "20mA",
+				"vf": "2.2V",
+				"iv": "2500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0162",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "588nm",
+				"if": "20mA",
+				"vf": "2.0V",
+				"iv": "4000mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0164",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "588nm",
+				"if": "20mA",
+				"vf": "2.3V",
+				"iv": "12000mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0166",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "591nm",
+				"if": "30mA",
+				"vf": "2.1V",
+				"iv": "23500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0170",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "570nm",
+				"if": "20mA",
+				"vf": "2.3V",
+				"iv": "80mcd",
+				"viewing_angle": "50°",
+				"lens": "diffused"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0174",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "525nm",
+				"if": "20mA",
+				"vf": "3.5V",
+				"iv": "7500mcd",
+				"viewing_angle": "30°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0176",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "515nm",
+				"if": "20mA",
+				"vf": "3.5V",
+				"iv": "8500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0177",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "525nm",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "36000mcd",
+				"viewing_angle": "20°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0292",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "527nm",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "64600mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0185",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "505nm",
+				"if": "20mA",
+				"vf": "3.5V",
+				"iv": "7000mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0180",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "470nm",
+				"if": "20mA",
+				"vf": "3.3V",
+				"iv": "350mcd",
+				"viewing_angle": "40°",
+				"lens": "diffused"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0183",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "468nm",
+				"if": "20mA",
+				"vf": "3.2V",
+				"iv": "2500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0187",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "470nm",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "13500mcd",
+				"viewing_angle": "20°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0189",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "470nm",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "23500mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0190",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "0.31/0.31",
+				"if": "20mA",
+				"vf": "3.2V",
+				"iv": "4000mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0192",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "0.31/0.32",
+				"if": "20mA",
+				"vf": "3.2V",
+				"iv": "7000mcd",
+				"viewing_angle": "20°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0196",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "500nm",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "33000mcd",
+				"viewing_angle": "20°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0296",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "0.29/0.29",
+				"if": "30mA",
+				"vf": "3.2V",
+				"iv": "45000mcd",
+				"viewing_angle": "15°",
+				"lens": "waterclear"
+			}
+		},
+		{
+			"kind": "diode",
+			"subtype": "led",
+			"part_number": "ZD0260",
+			"package": "LED5MM",
+			"spec": {
+				"wavelength": "405nm",
+				"if": "20mA",
+				"vf": "3.3V",
+				"iv": "60mcd",
+				"viewing_angle": "30°",
+				"lens": "waterclear"
+			}
+		}
+	]
+}

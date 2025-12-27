@@ -1,0 +1,5 @@
+*.venv
+*__pycache__
+
+out/*
+!out/example_output.pdf

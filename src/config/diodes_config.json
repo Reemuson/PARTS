@@ -1,0 +1,605 @@
+{
+	"title": "Diode Component Labels",
+	"layout": "AVERY_L7144",
+	"options": {
+		"draw_both_sides": false,
+		"draw_center_line": false,
+		"draw_outlines": true
+	},
+	"labels": [
+		{
+			"kind": "diode",
+			"part_number": "UF4003",
+			"subtype": "fast",
+			"package": "DO-41",
+			"spec": {
+				"vr": "200V",
+				"if": "1A",
+				"trr": "50ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4004",
+			"subtype": "rectifier",
+			"package": "DO-41",
+			"spec": {
+				"vr": "400V",
+				"if": "1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "UF4004",
+			"subtype": "fast",
+			"package": "DO-41",
+			"spec": {
+				"vr": "400V",
+				"if": "1A",
+				"trr": "50ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "SM4004",
+			"subtype": "fast",
+			"package": "DO-214-AC",
+			"spec": {
+				"vr": "400V",
+				"if": "1A",
+				"trr": "1.5µs"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4007",
+			"subtype": "rectifier",
+			"package": "DO-41",
+			"spec": {
+				"vr": "1000V",
+				"if": "1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "UF4007",
+			"subtype": "fast",
+			"package": "DO-41",
+			"spec": {
+				"vr": "1000V",
+				"if": "1A",
+				"trr": "50ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4934",
+			"subtype": "rectifier",
+			"package": "DO-41",
+			"spec": {
+				"vr": "100V",
+				"if": "1A",
+				"trr": "200ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "SM4934",
+			"subtype": "fast",
+			"package": "DO-214-AC",
+			"spec": {
+				"vr": "100V",
+				"if": "1A",
+				"trr": "200ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5404",
+			"subtype": "rectifier",
+			"package": "DO-27",
+			"spec": {
+				"vr": "400V",
+				"if": "3A",
+				"trr": "1.5µs"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5408",
+			"subtype": "rectifier",
+			"package": "DO-27",
+			"spec": {
+				"vr": "1000V",
+				"if": "3A",
+				"trr": "1.5µs"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5711",
+			"subtype": "schottky",
+			"package": "DO-35@blue",
+			"spec": {
+				"vr": "70V",
+				"if": "15mA"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5819",
+			"subtype": "schottky",
+			"package": "DO-41",
+			"spec": {
+				"vr": "40V",
+				"if": "1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "SM5819",
+			"subtype": "schottky",
+			"package": "DO-214-AC",
+			"spec": {
+				"vr": "40V",
+				"if": "1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5822",
+			"subtype": "schottky",
+			"package": "DO-27",
+			"spec": {
+				"vr": "40V",
+				"if": "3A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "SM5822",
+			"subtype": "schottky",
+			"package": "DO-214-AB",
+			"spec": {
+				"vr": "40V",
+				"if": "3A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "SS14",
+			"subtype": "schottky",
+			"package": "DO-214-AC",
+			"spec": {
+				"vr": "40V",
+				"if": "1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4148",
+			"subtype": "signal",
+			"package": "DO-213-AB",
+			"spec": {
+				"vr": "100V",
+				"if": "150mA",
+				"trr": "4ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4148",
+			"subtype": "signal",
+			"package": "DO-35@glass",
+			"spec": {
+				"vr": "100V",
+				"if": "150mA",
+				"trr": "4ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "6A4",
+			"subtype": "rectifier",
+			"package": "R-6",
+			"spec": {
+				"vr": "400V",
+				"if": "6A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "6A10",
+			"subtype": "rectifier",
+			"package": "R-6",
+			"spec": {
+				"vr": "1000V",
+				"if": "6A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "BAT46/BAT48",
+			"subtype": "schottky",
+			"package": "DO-35@blue",
+			"spec": {
+				"vr": "100V",
+				"if": "150mA"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "BY229",
+			"subtype": "fast",
+			"package": "TO-220-AC",
+			"spec": {
+				"vr": "600V",
+				"if": "8A",
+				"pin_config": "K A",
+				"trr": "145ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "FR302",
+			"subtype": "fast",
+			"package": "DO-27",
+			"spec": {
+				"vr": "100V",
+				"if": "3A",
+				"trr": "150ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "FR307",
+			"subtype": "fast",
+			"package": "DO-201",
+			"spec": {
+				"vr": "1000V",
+				"if": "3A",
+				"trr": "500ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "FR607",
+			"subtype": "fast",
+			"package": "R-6",
+			"spec": {
+				"vr": "1000V",
+				"if": "6A",
+				"trr": "500ns"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "MBR20100CT",
+			"subtype": "schottky",
+			"package": "TO-220",
+			"spec": {
+				"vr": "100V",
+				"if": "20A",
+				"pin_config": "A1 K A2"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "MBR735",
+			"subtype": "schottky",
+			"package": "TO-220-AC",
+			"spec": {
+				"vr": "35V",
+				"if": "7A",
+				"pin_config": "K A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4728",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "3.3V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4729",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "3.6V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4730",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "3.9V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4731",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "4.3V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4732",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "4.7V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4733",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "5.1V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4734",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "5.6V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4735",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "6.2V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4736",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "6.8V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4737",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "7.5V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4738",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "8.2V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4739",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "9.1V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4740",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "10V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4741",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "11V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4742",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "12V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4743",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "13V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4744",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "15V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4745",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "16V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4746",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "18V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4747",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "20V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4748",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "22V"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4749",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "24V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4750",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "27V"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4751",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "30V"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4752",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "33V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4753",
+			"subtype": "zener",
+			"package": "DO-41@metallic",
+			"spec": {
+				"vz": "36V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4754",
+			"subtype": "zener",
+			"package": "DO-41",
+			"spec": {
+				"vz": "39V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N4761",
+			"subtype": "zener",
+			"package": "DO-41@glass",
+			"spec": {
+				"vz": "75V",
+				"pd": "1W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5349",
+			"subtype": "zener",
+			"package": "T-18",
+			"spec": {
+				"vz": "12V",
+				"pd": "5W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5352",
+			"subtype": "zener",
+			"package": "T-18",
+			"spec": {
+				"vz": "15V",
+				"pd": "5W"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1N5374",
+			"subtype": "zener",
+			"package": "T-18",
+			"spec": {
+				"vz": "75V",
+				"pd": "5W"
+			}
+		}
+	]
+}
