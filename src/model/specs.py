@@ -2,12 +2,72 @@
 
 """
 @brief 	Specification data models for semiconductor devices.
-	Each spec class stores typed electrical parameters and returns
-	display-ready strings via a unified .format() method.
+        Each spec class stores typed electrical parameters and returns
+        display-ready strings via a unified .format() method.
 """
 
 from dataclasses import dataclass
 from typing import Optional, List
+
+# =====================================================================
+# CAPACITOR SPECS
+# =====================================================================
+
+
+@dataclass
+class capacitor_spec_t:
+    """
+    @brief	Unified spec for capacitor devices.
+    """
+
+    subtype: str
+
+    c: Optional[str] = None
+    v_rated: Optional[str] = None
+    tol: Optional[str] = None
+    dielectric: Optional[str] = None
+    t_rated: Optional[str] = None
+    esr: Optional[str] = None
+    i_ripple: Optional[str] = None
+    i_leak: Optional[str] = None
+    c_min: Optional[str] = None
+    c_max: Optional[str] = None
+    f_test: Optional[str] = None
+
+    def format(self) -> List[str]:
+        """
+        @brief	Convert populated spec fields into a list of strings
+                for the label renderer. Markup-friendly.
+        @return	List of display lines.
+        """
+        lines: List[str] = []
+        st = (self.subtype or "").strip().lower()
+
+        if (st in ("variable", "trimmer")) and self.c_min and self.c_max:
+            if self.f_test:
+                lines.append(f"C = {self.c_min}–{self.c_max} @ {self.f_test}")
+            else:
+                lines.append(f"C = {self.c_min}–{self.c_max}")
+        elif self.c:
+            lines.append(f"C = {self.c}")
+
+        if self.v_rated:
+            lines.append(f"V_R = {self.v_rated}")
+
+        if self.dielectric and st not in ("ceramic", "monolithic"):
+            lines.append(f"dielectric = {self.dielectric}")
+
+        if self.t_rated:
+            lines.append(f"T_op = {self.t_rated}")
+
+        if self.esr:
+            lines.append(f"ESR = {self.esr}")
+        if self.i_ripple:
+            lines.append(f"I_ripple = {self.i_ripple}")
+        if self.i_leak:
+            lines.append(f"I_leak = {self.i_leak}")
+
+        return lines
 
 
 # =====================================================================
@@ -19,7 +79,7 @@ from typing import Optional, List
 class transistor_spec_t:
     """
     @brief	Generic spec for BJT, MOSFET, JFET, IGBT.
-		Subtype determines which fields are used.
+                Subtype determines which fields are used.
     """
 
     # Common to all transistor types
@@ -57,7 +117,7 @@ class transistor_spec_t:
     def format(self) -> List[str]:
         """
         @brief 	Convert populated spec fields into a list of strings
-        	for the label renderer. Markup-friendly.
+                for the label renderer. Markup-friendly.
         """
         lines: List[str] = []
 
@@ -122,12 +182,12 @@ class transistor_spec_t:
 @dataclass
 class diode_spec_t:
     """
-    @brief 	Unified spec class for all diode-based devices.
+    @brief	Unified spec class for all diode-based devices.
 
-    		Subtype is used to select both the schematic symbol and any
-    		subtype-specific spec display rules.
+            Subtype selects schematic symbol and any subtype-specific
+            spec display rules.
 
-    		All fields are optional. Only non-empty fields appear in output.
+            All fields are optional. Only non-empty fields appear in output.
     """
 
     subtype: str  # "diode", "zener", "tvs", "led", "varactor", etc
@@ -147,6 +207,7 @@ class diode_spec_t:
 
     # TVS
     vc: Optional[str] = None
+    vwm: Optional[str] = None
     ipk: Optional[str] = None
     ppk: Optional[str] = None
 
@@ -162,12 +223,25 @@ class diode_spec_t:
     vtest: Optional[str] = None
 
     def format(self) -> List[str]:
+        """
+        @brief	Format spec lines for label output.
+        @return	List of display-ready spec lines.
+        """
         lines: List[str] = []
-        st = (self.subtype or "").strip().lower()
+        subtype_text = (self.subtype or "").strip().lower()
 
         def add(label: str, value: Optional[str]) -> None:
-            if value:
-                lines.append(f"{label} = {value}")
+            """
+            @brief	Append a formatted line if the value is present.
+            @param	label	Display label token.
+            @param	value	Value string to render.
+            """
+            if value is None:
+                return
+            value_text = value.strip()
+            if value_text == "":
+                return
+            lines.append(f"{label} = {value_text}")
 
         # Common
         add("V_R", self.vr)
@@ -175,9 +249,15 @@ class diode_spec_t:
         add("V_F", self.vf)
 
         # T_rr only where it is meaningful for commutating diodes
-        if self.trr:
-            is_schottky = "schottky" in st
-            is_non_commutating = st in ("zener", "tvs", "led", "varactor", "varicap")
+        if self.trr is not None and self.trr.strip() != "":
+            is_schottky = "schottky" in subtype_text
+            is_non_commutating = subtype_text in (
+                "zener",
+                "tvs",
+                "led",
+                "varactor",
+                "varicap",
+            )
             if (not is_schottky) and (not is_non_commutating):
                 add("T_rr", self.trr)
 
@@ -188,6 +268,7 @@ class diode_spec_t:
         add("V_BR", self.vbr)
 
         # TVS
+        add("V_WM", self.vwm)
         add("V_C", self.vc)
         add("I_pk", self.ipk)
         add("P_pk", self.ppk)

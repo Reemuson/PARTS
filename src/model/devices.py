@@ -7,7 +7,7 @@
 from dataclasses import dataclass
 from typing import Optional, Union, Literal, List
 
-from src.model.specs import diode_spec_t, transistor_spec_t
+from src.model.specs import diode_spec_t, capacitor_spec_t, transistor_spec_t
 
 
 device_kind_t = Literal[
@@ -52,9 +52,10 @@ class diode_label_t:
 @dataclass
 class capacitor_label_t:
     kind: Literal["capacitor"]
-    value: str
-    voltage: str = ""
-    dielectric: str = ""
+    part_number: str
+    subtype: str
+    package: str = ""
+    spec: Optional[capacitor_spec_t] = None
 
 
 # =====================================================================

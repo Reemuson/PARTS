@@ -598,6 +598,149 @@
 				"vz": "75V",
 				"pd": "5W"
 			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE6.8",
+			"subtype": "tvs-uni",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "5.5V",
+				"vc": "10.8V",
+				"vbr": "6.1--7.4V",
+				"ppk": "400W",
+				"ipk": "38A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE15",
+			"subtype": "tvs-uni",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "12.1V",
+				"vc": "22V",
+				"vbr": "13.5--16.5V",
+				"ppk": "400W",
+				"ipk": "19A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE15AC",
+			"subtype": "tvs-bi",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "12.1V",
+				"vc": "22V",
+				"vbr": "13.5--16.5V",
+				"ppk": "400W",
+				"ipk": "19A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE16",
+			"subtype": "tvs-uni",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "12.9V",
+				"vc": "23.5V",
+				"vbr": "14.4--17.6V",
+				"ppk": "400W",
+				"ipk": "17.8A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE16AC",
+			"subtype": "tvs-bi",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "12.9V",
+				"vc": "23.5V",
+				"vbr": "14.4--17.6V",
+				"ppk": "400W",
+				"ipk": "17.8A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "P4KE400AC",
+			"subtype": "tvs-bi",
+			"package": "DO-204-AL",
+			"spec": {
+				"vwm": "12.9V",
+				"vc": "548V",
+				"vbr": "380--420V",
+				"ppk": "400W",
+				"ipk": "1.1A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1.5KE15",
+			"subtype": "tvs-uni",
+			"package": "DO-201-AA",
+			"spec": {
+				"vwm": "12.9V",
+				"vc": "21.2V",
+				"vbr": "14.3--15.8V",
+				"ppk": "1500W",
+				"ipk": "71.7A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1.5KE16",
+			"subtype": "tvs-uni",
+			"package": "DO-201-AA",
+			"spec": {
+				"vwm": "13.6V",
+				"vc": "22.5V",
+				"vbr": "15.2--16.8V",
+				"ppk": "1500W",
+				"ipk": "67.6A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1.5KE16CA",
+			"subtype": "tvs-bi",
+			"package": "DO-201-AA",
+			"spec": {
+				"vwm": "13.6V",
+				"vc": "22.5V",
+				"vbr": "15.2--16.8V",
+				"ppk": "1500W",
+				"ipk": "67.6A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1.5KE36CA",
+			"subtype": "tvs-bi",
+			"package": "DO-201-AA",
+			"spec": {
+				"vwm": "30.8V",
+				"vc": "49.9V",
+				"vbr": "34.2--37.8V",
+				"ppk": "1500W",
+				"ipk": "30.5A"
+			}
+		},
+		{
+			"kind": "diode",
+			"part_number": "1.5KE400CA",
+			"subtype": "tvs-bi",
+			"package": "DO-201-AA",
+			"spec": {
+				"vwm": "342V",
+				"vc": "548V",
+				"vbr": "380--420V",
+				"ppk": "1500W",
+				"ipk": "3.7A"
+			}
 		}
 	]
 }

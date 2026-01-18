@@ -8,7 +8,6 @@ from src.model.devices import active_label_t
 
 from src.components.label_renderer_base import (
     apply_standard_margins,
-    draw_center_line,
     label_fonts,
 )
 
@@ -20,16 +19,12 @@ def draw_active_label(
     column: int,
     label: active_label_t,
     font_family: str,
-    draw_center: bool,
 ) -> None:
     """@brief Draw a label for an active device."""
 
     with sticker_rect_t(canvas, layout, row, column) as rect:
 
         apply_standard_margins(rect)
-
-        if draw_center:
-            draw_center_line(canvas, rect)
 
         title_fs = label_fonts["title"]
         meta_fs = label_fonts["meta"]

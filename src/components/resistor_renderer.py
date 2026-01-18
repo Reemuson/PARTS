@@ -17,11 +17,10 @@ from src.core.resistor_value import (
     get_eia98_code,
 )
 
-from src.packages.axial_resistor import draw_resistor_body
+from src.packages.resistor_axial import draw_resistor_body
 
 from src.components.label_renderer_base import (
     apply_standard_margins,
-    draw_center_line,
     label_fonts,
 )
 
@@ -33,7 +32,6 @@ def draw_resistor_label(
     column: int,
     label: resistor_label_t,
     font_family: str,
-    draw_center: bool,
 ) -> None:
     """@brief Draw a complete resistor label on the sheet."""
 
@@ -41,10 +39,6 @@ def draw_resistor_label(
 
         # Standardised margins
         apply_standard_margins(rect)
-
-        # Optional guide line
-        if draw_center:
-            draw_center_line(canvas, rect)
 
         layout_info = compute_label_layout(rect, symbol_fraction=None)
         box: label_rect_t = layout_info.usable

@@ -8,7 +8,10 @@ from reportlab.pdfgen.canvas import Canvas
 from src.core.geometry import simple_rect
 from src.packages.model import resolved_package_t
 
-from src.packages.axial_diode import draw_axial_package
+from src.packages.diode_axial import draw_axial_package
+
+from src.packages.capacitor_disc import draw_capacitor_disc
+
 from src.packages.to92 import draw_to92_package
 from src.packages.to204 import draw_to204_package
 from src.packages.to205 import draw_to205_package
@@ -22,6 +25,7 @@ from src.packages.to264 import draw_to264_package
 from src.packages.smd2 import draw_smd2_package
 from src.packages.smd3 import draw_smd3_package
 from src.packages.smd4 import draw_smd4_package
+
 from src.packages.led_tht import draw_led_tht
 
 
@@ -72,6 +76,30 @@ def _merge_package_and_device_spec(
     return ns
 
 
+def _is_bidirectional_tvs(spec: Optional[object]) -> bool:
+    """
+    @brief	Detect whether a diode spec represents a bidirectional TVS.
+
+    @param spec	Optional device spec.
+    @return	True if spec indicates a bidirectional TVS.
+    """
+    if spec is None:
+        return False
+
+    subtype = getattr(spec, "subtype", None)
+    if subtype is None:
+        return False
+
+    subtype_text = str(subtype).strip().lower()
+    if subtype_text == "":
+        return False
+
+    if "tvs" not in subtype_text:
+        return False
+
+    return ("bi" in subtype_text) or ("bidirectional" in subtype_text)
+
+
 def _draw_axial_round_body(
     canvas: Canvas,
     rect: simple_rect,
@@ -87,7 +115,17 @@ def _draw_axial_round_body(
     @param spec		Optional device spec
     """
     material = str(pkg.params.get("material", ""))
-    draw_axial_package(canvas, rect, pkg.params, material)
+
+    show_polarity_band = not _is_bidirectional_tvs(spec)
+
+    draw_axial_package(
+        canvas,
+        rect,
+        pkg.params,
+        material,
+        show_labels=True,
+        show_polarity_band=show_polarity_band,
+    )
 
 
 def _draw_melf(
@@ -108,7 +146,35 @@ def _draw_melf(
     params["mount"] = "smd"
 
     material = str(params.get("material", ""))
-    draw_axial_package(canvas, rect, params, material, show_labels=True)
+
+    show_polarity_band = not _is_bidirectional_tvs(spec)
+
+    draw_axial_package(
+        canvas,
+        rect,
+        params,
+        material,
+        show_labels=True,
+        show_polarity_band=show_polarity_band,
+    )
+
+
+def _draw_capacitor_disc(
+    canvas: Canvas,
+    rect: simple_rect,
+    pkg: resolved_package_t,
+    spec: Optional[object],
+) -> None:
+    """
+    @brief		Draw disc ceramic capacitor package.
+
+    @param canvas	ReportLab canvas.
+    @param rect		Target rectangle.
+    @param pkg		Resolved package.
+    @param spec		Optional device spec.
+    @return		None.
+    """
+    draw_capacitor_disc(canvas, rect, pkg, spec)
 
 
 def _draw_to92_moulded(
@@ -380,7 +446,7 @@ def _draw_led_tht_round(
     spec: Optional[object],
 ) -> None:
     """
-    @brief	Draw THT LED package.
+    @brief		Draw THT LED package.
 
     @param canvas	ReportLab canvas
     @param rect		Target rectangle
@@ -392,6 +458,9 @@ def _draw_led_tht_round(
 
 register_family("axial_round_body", _draw_axial_round_body)
 register_family("melf", _draw_melf)
+
+register_family("capacitor_disc", _draw_capacitor_disc)
+
 register_family("to92_moulded", _draw_to92_moulded)
 register_family("to204_diamond", _draw_to204_diamond)
 register_family("to205_package", _draw_to205_package)

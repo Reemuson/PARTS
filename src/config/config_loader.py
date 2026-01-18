@@ -18,7 +18,7 @@ from src.model.devices import (
     resistor_label_t,
     transistor_label_t,
 )
-from src.model.specs import diode_spec_t, transistor_spec_t
+from src.model.specs import diode_spec_t, capacitor_spec_t, transistor_spec_t
 
 
 @dataclass(frozen=True)
@@ -27,8 +27,6 @@ class render_options_t:
     @brief	Render options for a job.
     """
 
-    draw_both_sides: bool
-    draw_center_line: bool
     draw_outlines: bool
 
 
@@ -94,8 +92,6 @@ def _parse_options(raw: Dict[str, Any]) -> render_options_t:
         raise config_error_t("options field must be an object")
 
     return render_options_t(
-        draw_both_sides=bool(raw.get("draw_both_sides", False)),
-        draw_center_line=bool(raw.get("draw_center_line", False)),
         draw_outlines=bool(raw.get("draw_outlines", False)),
     )
 
@@ -202,6 +198,7 @@ def _parse_label_cell(raw: Dict[str, Any]) -> label_t:
                 izt=spec_dict.get("izt"),
                 pd=spec_dict.get("pd"),
                 vbr=spec_dict.get("vbr"),
+                vwm=spec_dict.get("vwm"),
                 vc=spec_dict.get("vc"),
                 ipk=spec_dict.get("ipk"),
                 ppk=spec_dict.get("ppk"),
@@ -224,12 +221,40 @@ def _parse_label_cell(raw: Dict[str, Any]) -> label_t:
         )
 
     if kind == "capacitor":
-        value = str(_require_field(raw, "value", context=context))
+        part_number = str(_require_field(raw, "part_number", context=context))
+        subtype = str(_require_field(raw, "subtype", context=context))
+        package = str(raw.get("package", ""))
+
+        spec_raw = raw.get("spec")
+        if spec_raw is None:
+            spec = None
+        elif not isinstance(spec_raw, dict):
+            raise config_error_t(
+                "spec for capacitor must be an object",
+                detail=context,
+            )
+        else:
+            spec = capacitor_spec_t(
+                subtype=subtype,
+                c=spec_raw.get("c", spec_raw.get("capacitance")),
+                v_rated=spec_raw.get("v_rated", spec_raw.get("voltage")),
+                tol=spec_raw.get("tol", spec_raw.get("tolerance")),
+                dielectric=spec_raw.get("dielectric"),
+                t_rated=spec_raw.get("t_rated", spec_raw.get("temperature_range")),
+                esr=spec_raw.get("esr"),
+                i_ripple=spec_raw.get("i_ripple", spec_raw.get("ripple_current")),
+                i_leak=spec_raw.get("i_leak", spec_raw.get("leakage_current")),
+                c_min=spec_raw.get("c_min", spec_raw.get("cmin")),
+                c_max=spec_raw.get("c_max", spec_raw.get("cmax")),
+                f_test=spec_raw.get("f_test", spec_raw.get("vtest")),
+            )
+
         return capacitor_label_t(
             kind="capacitor",
-            value=value,
-            voltage=str(raw.get("voltage", "")),
-            dielectric=str(raw.get("dielectric", "")),
+            part_number=part_number,
+            subtype=subtype,
+            package=package,
+            spec=spec,
         )
 
     if kind == "active":

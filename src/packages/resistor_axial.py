@@ -1,4 +1,4 @@
-# file: src/packages/axial_resistor.py
+# file: src/packages/resistor_axial.py
 
 from reportlab.pdfgen.canvas import Canvas
 from reportlab.lib.colors import gray, HexColor, toColor

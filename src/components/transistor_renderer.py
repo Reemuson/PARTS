@@ -22,7 +22,6 @@ from src.packages.api import draw_package
 
 from src.components.label_renderer_base import (
     apply_standard_margins,
-    draw_center_line,
     label_fonts,
 )
 
@@ -34,7 +33,6 @@ def draw_transistor_label(
     column: int,
     label: transistor_label_t,
     font_family: str,
-    draw_center: bool,
 ) -> None:
     """@brief Draw a complete transistor label (BJT, MOSFET, JFET, IGBT)."""
 
@@ -42,10 +40,6 @@ def draw_transistor_label(
 
         # Consistent margins
         apply_standard_margins(rect)
-
-        # Optional guideline
-        if draw_center:
-            draw_center_line(canvas, rect)
 
         layout_info: label_layout_t = compute_label_layout(rect, symbol_fraction=0.33)
         text_rect: label_rect_t = layout_info.text

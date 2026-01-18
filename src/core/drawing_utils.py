@@ -2,8 +2,11 @@
 
 from typing import Protocol
 
-from reportlab.lib.colors import black
+from reportlab.lib.colors import black, white
 from reportlab.pdfgen.canvas import Canvas
+from reportlab.pdfbase import pdfmetrics
+
+from src.core.markup import draw_markup, measure_markup
 
 
 class rect_like_t(Protocol):
@@ -97,3 +100,67 @@ def draw_cathode_bar(
     bar_x = cx + s if not mirrored else cx - s
     canvas.setLineWidth(1.6)
     canvas.line(bar_x, cy + s, bar_x, cy - s)
+
+
+def draw_knockout_tag(
+    canvas: Canvas,
+    x: float,
+    y: float,
+    text: str,
+    font: str,
+    size: float,
+) -> float:
+    """
+    @brief	Draw a knockout tag aligned to the caller's baseline.
+
+    Text is drawn with draw_markup() so subscripts, superscripts,
+    greek names and "+-" are handled consistently.
+
+    @param canvas	Target canvas.
+    @param x	Left x position.
+    @param y	Baseline y position (same line as surrounding text).
+    @param text	Text to draw (markup enabled).
+    @param font	Font name.
+    @param size	Font size (points).
+    @return	Width consumed by the tag in points.
+    """
+    canvas.saveState()
+    canvas.setFont(font, size)
+
+    text_width = measure_markup(canvas, text, font, size)
+
+    ascent = (pdfmetrics.getAscent(font) * size) / 1000.0
+    descent = (abs(pdfmetrics.getDescent(font)) * size) / 1000.0
+
+    padding_x = size * 0.22
+    padding_y = size * 0.14
+
+    optical_y = size * 0.07
+
+    box_left = x
+    box_bottom = y - descent - padding_y + optical_y
+    box_width = text_width + (2.0 * padding_x)
+    box_height = ascent + descent + (2.0 * padding_y)
+
+    canvas.setFillColor(black)
+    canvas.rect(
+        box_left,
+        box_bottom,
+        box_width,
+        box_height,
+        stroke=0,
+        fill=1,
+    )
+
+    canvas.setFillColor(white)
+    draw_markup(
+        canvas,
+        x + padding_x,
+        y,
+        text,
+        font,
+        size,
+    )
+
+    canvas.restoreState()
+    return box_width

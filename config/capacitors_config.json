@@ -1,0 +1,793 @@
+{
+	"title": "Capacitor Component Labels",
+	"layout": "AVERY_L7144",
+	"options": {
+		"draw_outlines": true
+	},
+	"labels": [
+		{
+			"kind": "capacitor",
+			"part_number": "RC5300",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "1pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5301",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "1.2pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5302",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "1.5pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5303",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "1.8pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5304",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "2.2pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5305",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "2.7pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5306",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "3.3pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5307",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "3.9pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5308d4.5",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5",
+			"spec": {
+				"capacitance": "4.7pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5309d4.5",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5",
+			"spec": {
+				"capacitance": "5.6pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5310",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "6.8pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5311",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "8.2pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5312",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "10pF",
+				"voltage": "50V",
+				"tolerance": "+-0.25pF",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5313",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "12pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5314",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "15pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5315",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "18pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5316",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "22pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5317",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "27pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5318",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "33pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5319",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "39pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5320",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5d4.5",
+			"spec": {
+				"capacitance": "47pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5321",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "56pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5322",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "68pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5323",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "82pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5324",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d7",
+			"spec": {
+				"capacitance": "100pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5325",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "120pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5326",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "150pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5327",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "180pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5328",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "220pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5329",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "270pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5330",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "330pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5331",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "390pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5332",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "470pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5333",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "560pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5334",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "680pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5335",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "820pF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5336",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "1nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5340",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d4.5",
+			"spec": {
+				"capacitance": "1.2nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5342",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "3.3nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5344",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d7",
+			"spec": {
+				"capacitance": "4.7nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5345",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d7",
+			"spec": {
+				"capacitance": "5.6nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5346",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d8",
+			"spec": {
+				"capacitance": "6.8nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5347",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d10",
+			"spec": {
+				"capacitance": "8.2nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5348",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d5",
+			"spec": {
+				"capacitance": "10nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5352",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "22nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "Y5P",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5354",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "33nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5U",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5356",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "47nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5U",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5360",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5@d6",
+			"spec": {
+				"capacitance": "100nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5U",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5364",
+			"subtype": "ceramic",
+			"package": "CAP-DISC@p5",
+			"spec": {
+				"capacitance": "220nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5U",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5480",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "10nF",
+				"voltage": "50V",
+				"tolerance": "+-10%",
+				"dielectric": "X7R",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5482",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "22nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5V",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5486",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "47nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5V",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5490",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "100nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "X7R",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5494",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "220nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5V",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5498",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "470nF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5V",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5480",
+			"subtype": "monolithic",
+			"package": "capacitor_mono@p5",
+			"spec": {
+				"capacitance": "1µF",
+				"voltage": "50V",
+				"tolerance": "+-20%",
+				"dielectric": "Y5V",
+				"temperature_range": "-30 to +85°C",
+				"polarised": false
+			}
+		}
+	]
+}

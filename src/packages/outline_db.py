@@ -42,12 +42,12 @@ def _register_outline(
     aliases: Optional[List[str]] = None,
 ) -> None:
     """
-    @brief		Register an outline, optionally renderable.
+    @brief			Register an outline, optionally renderable.
 
-    @param canonical_id	Canonical outline id
+    @param canonical_id		Canonical outline id
     @param domain		"DO", "TO" or another taxonomy domain
     @param group		Grouping label
-    @param family_id	Renderer family id
+    @param family_id		Renderer family id
     @param params		Mechanical params for the family
     @param aliases		Optional alias strings
     """
@@ -72,7 +72,7 @@ def _register_alias(alias: str, canonical_id: str) -> None:
     """
     @brief		Register a pure alias mapping to an outline.
 
-    @param alias		Alias string
+    @param alias	Alias string
     @param canonical_id	Canonical outline id
     """
     key = _normalise_alias_key(alias)
@@ -90,13 +90,13 @@ def _register_variant(
     """
     @brief		Register a variant of an outline.
 
-                    The variant is printed as variant_id, but it inherits family and
-                    base params from base_id, with overrides applied.
+                        The variant is printed as variant_id, but it inherits family and
+                        base params from base_id, with overrides applied.
 
     @param variant_id	Canonical variant id (printed id)
-    @param base_id		Canonical base outline id
+    @param base_id	Canonical base outline id
     @param overrides	Mechanical override params
-    @param aliases		Optional alias strings mapping to this variant
+    @param aliases	Optional alias strings mapping to this variant
     """
     record = {
         "base_id": base_id,
@@ -118,9 +118,6 @@ def _register_variant(
 def _seed_full_outline_registry() -> None:
     """
     @brief	Seed OUTLINES with known canonical list.
-
-            This registers every outline as known, but not necessarily renderable.
-            Renderable outlines are then overridden with family and params.
     """
     do_groups: List[Tuple[str, List[str]]] = [
         ("Button Rectifier", ["DO-217"]),
@@ -705,6 +702,17 @@ def _seed_current_renderables() -> None:
             "lead_w": 0.6,
         },
         aliases=["LED5MM", "5MMLED"],
+    )
+
+    _register_outline(
+        "CAP-DISC",
+        domain="GEN",
+        group="Capacitor Disc",
+        family_id="capacitor_disc",
+        params={
+            "body_diameter_mm": 7.0,
+            "lead_diameter_mm": 0.6,
+        },
     )
 
 

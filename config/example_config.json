@@ -400,6 +400,117 @@
 				"h_fe": "120–200",
 				"f_t": "100MHz"
 			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "RC5300",
+			"subtype": "ceramic",
+			"package": "disc",
+			"spec": {
+				"capacitance": "1pF",
+				"voltage": "50V",
+				"tolerance": "+-5%",
+				"dielectric": "C0G",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "GRM21BZ71E106KE15L",
+			"subtype": "ceramic",
+			"package": "0805",
+			"spec": {
+				"capacitance": "10µF",
+				"voltage": "25V",
+				"tolerance": "10%",
+				"dielectric": "X7R",
+				"temperature_range": "-55 to +125°C",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "UHE1E471MPD6",
+			"subtype": "electrolytic",
+			"package": "radial",
+			"spec": {
+				"capacitance": "470µF",
+				"voltage": "25V",
+				"tolerance": "20%",
+				"temperature_range": "-40 to +105°C",
+				"polarised": true,
+				"ripple_current": "1.8A",
+				"esr": "0.06ohm",
+				"leakage_current": "0.01CV"
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "T491A106M016AT",
+			"subtype": "tantalum",
+			"package": "1206",
+			"spec": {
+				"capacitance": "10µF",
+				"voltage": "16V",
+				"tolerance": "10%",
+				"temperature_range": "-55 to +125°C",
+				"polarised": true,
+				"esr": "2.5ohm",
+				"leakage_current": "1uA"
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "POLYMER_330UF_6V3",
+			"subtype": "polymer",
+			"package": "SMD_7343",
+			"spec": {
+				"capacitance": "330µF",
+				"voltage": "6.3V",
+				"tolerance": "20%",
+				"temperature_range": "-55 to +105°C",
+				"polarised": true,
+				"esr": "0.02ohm",
+				"ripple_current": "5.0A"
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "SUPERCAP_1F_5V5",
+			"subtype": "supercap",
+			"package": "COIN_21MM",
+			"spec": {
+				"capacitance": "1F",
+				"voltage": "5.5V",
+				"tolerance": "-20 to +80%",
+				"polarised": true,
+				"leakage_current": "10uA",
+				"esr": "30ohm"
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "TRIMMER_2_20PF",
+			"subtype": "trimmer",
+			"package": "SMD_3MM",
+			"spec": {
+				"cmin": "2pF",
+				"cmax": "20pF",
+				"vtest": "1MHz",
+				"polarised": false
+			}
+		},
+		{
+			"kind": "capacitor",
+			"part_number": "VARIABLE_10_200PF",
+			"subtype": "variable",
+			"package": "AIR_DIELECTRIC",
+			"spec": {
+				"cmin": "10pF",
+				"cmax": "200pF",
+				"polarised": false
+			}
 		}
 	]
 }

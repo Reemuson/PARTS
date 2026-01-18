@@ -116,7 +116,6 @@ def _draw_single_label(
     @return		None.
     @warning		Raises render_error_t on unknown label types.
     """
-    draw_center_line = bool(options.draw_center_line)
 
     if isinstance(label, resistor_label_t):
         draw_resistor_label(
@@ -126,7 +125,6 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            draw_center_line,
         )
         return
 
@@ -138,7 +136,6 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            draw_center_line,
         )
         return
 
@@ -150,7 +147,6 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            draw_center_line,
         )
         return
 
@@ -162,7 +158,6 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            draw_center_line,
         )
         return
 
@@ -174,7 +169,6 @@ def _draw_single_label(
             column,
             label,
             font_family,
-            draw_center_line,
         )
         return
 

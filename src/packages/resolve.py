@@ -14,8 +14,8 @@ def _normalise_lookup(raw: str) -> str:
     """
     @brief	Normalise a package string for alias and variant lookups.
 
-    @param raw	Raw key from label JSON
-    @return	Normalised key
+    @param raw	Raw key from label JSON.
+    @return	Normalised key.
     """
     if not raw:
         return ""
@@ -29,9 +29,13 @@ def _split_qualifiers(raw: str) -> Tuple[str, List[str]]:
     """
     @brief	Split raw package key and non-print qualifiers.
 
-    		Qualifiers use '@', eg "DO-204-AL@glass".
+    Qualifiers use '@', eg "DO-204-AL@glass".
 
-    @param raw	Raw key
+    @Note: Qualifiers are preserved (lowercased) and returned as a list,
+    but only the base key participates in outline lookup. This means
+    "DISC@5@blue" will resolve base "DISC" and qualifiers ["5","blue"].
+
+    @param raw	Raw key.
     @return	(base_key, qualifiers)
     """
     if not raw:
@@ -53,11 +57,12 @@ def _apply_qualifiers(
     """
     @brief		Apply qualifiers to params without affecting print id.
 
-    @param params	Params to mutate
-    @param qualifiers	Qualifier tokens
+    @param params	Params to mutate.
+    @param qualifiers	Qualifier tokens.
+    @return		None.
     """
     for q in qualifiers:
-        if q in ["glass", "epoxy", "blue", "metallic"]:
+        if q in ["glass", "epoxy", "blue", "metallic", "yellow"]:
             params["material"] = q
         elif q in ["fullpack", "insulated", "f"]:
             params["tab_finish"] = "insulated"
@@ -75,7 +80,7 @@ def _resolve_to_ids_and_overrides(
     """
     @brief		Resolve key to canonical id, print id and overrides.
 
-    @param raw_key	Raw key, qualifiers already stripped
+    @param raw_key	Raw key, qualifiers already stripped.
     @return		(canonical_id, print_id, overrides)
     """
     key = _normalise_lookup(raw_key)
@@ -104,8 +109,8 @@ def resolve_package(raw_package: str) -> Optional[resolved_package_t]:
     """
     @brief		Resolve a package string to a renderable package description.
 
-    @param raw_package	Raw key from label JSON
-    @return		Resolved package or None if unknown
+    @param raw_package	Raw key from label JSON.
+    @return		Resolved package or None if unknown.
     """
     base_key, qualifiers = _split_qualifiers(raw_package)
     canonical_id, print_id, overrides = _resolve_to_ids_and_overrides(base_key)

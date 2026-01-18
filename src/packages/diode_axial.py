@@ -1,4 +1,4 @@
-# file: src/packages/axial_diode.py
+# file: src/packages/diode_axial.py
 
 from reportlab.lib.colors import black
 from reportlab.pdfgen.canvas import Canvas
@@ -93,16 +93,18 @@ def draw_axial_package(
     info: dict,
     material: str,
     show_labels: bool = True,
+    show_polarity_band: bool = True,
 ) -> None:
     """
-    @brief		Draw a cylindrical axial package in THT or MELF-style SMD form.
+    @brief			Draw a cylindrical axial package in THT or MELF-style SMD form.
 
-    @param canvas	ReportLab canvas
-    @param rect		Target rectangle
-    @param info		Param dictionary (dimensions, mount, pad sizing)
-    @param material	Material/colour selector (glass, epoxy, metallic, blue)
-    @param show_labels	Draw A/K labels
-    @return		None
+    @param canvas		ReportLab canvas
+    @param rect			Target rectangle
+    @param info			Param dictionary (dimensions, mount, pad sizing)
+    @param material		Material/colour selector (glass, epoxy, metallic, blue)
+    @param show_labels		Draw A/K labels
+    @param show_polarity_band	Draw polarity band on the body
+    @return			None
     """
     mount_style = str(info.get("mount", "tht")).strip().lower()
 
@@ -225,16 +227,17 @@ def draw_axial_package(
     )
     canvas.restoreState()
 
-    band_w = body_w * 0.16
-    band_x = body_x + body_w - band_w
+    if show_polarity_band:
+        band_w = body_w * 0.16
+        band_x = body_x + body_w - band_w
 
-    if mount_style == "smd" and pad_w > 0.0:
-        band_x = body_x + body_w - pad_w - band_w
-        if band_x < body_x:
-            band_x = body_x
+        if mount_style == "smd" and pad_w > 0.0:
+            band_x = body_x + body_w - pad_w - band_w
+            if band_x < body_x:
+                band_x = body_x
 
-    canvas.setFillColorRGB(*band_col)
-    canvas.rect(band_x, body_y, band_w, body_h, fill=1, stroke=0)
+        canvas.setFillColorRGB(*band_col)
+        canvas.rect(band_x, body_y, band_w, body_h, fill=1, stroke=0)
 
     if mount_style == "smd" and pad_w > 0.0:
         left_pad_x = body_x - cap_overlap
@@ -243,7 +246,7 @@ def draw_axial_package(
         right_pad_x = body_x + body_w - pad_w
         right_pad_w = pad_w + cap_overlap
 
-        canvas.setFillColorRGB(0.80, 0.80, 0.82)
+        canvas.setFillColorRGB(0.80, 0.80, 0.80)
         canvas.rect(left_pad_x, pad_y, left_pad_w, pad_h, fill=1, stroke=0)
         canvas.rect(right_pad_x, pad_y, right_pad_w, pad_h, fill=1, stroke=0)
 

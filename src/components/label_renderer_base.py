@@ -35,28 +35,3 @@ def apply_standard_margins(rect) -> None:
     """
     rect.width -= 0.10 * inch
     rect.left += 0.05 * inch
-
-
-# ---------------------------------------------------------------------------
-# Centre guideline
-# ---------------------------------------------------------------------------
-
-
-def draw_center_line(canvas: Canvas, rect) -> None:
-    """
-    @brief Draw a faint horizontal centre line for grid alignment.
-
-    @param canvas PDF canvas to draw onto.
-    @param rect Rectangle describing the label bounds.
-    """
-    canvas.setStrokeColor(black, 0.25)
-    canvas.setLineWidth(0.7)
-
-    y = rect.bottom + rect.height * 0.50
-
-    canvas.line(
-        rect.left,
-        y,
-        rect.left + rect.width,
-        y,
-    )
